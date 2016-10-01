@@ -1,0 +1,42 @@
+{
+  "name": "task-rocket",
+  "version": "1.0.0",
+  "description": "Ondemand platform for both job seekers or individual head hunters",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SunyoungKim508/task-rocket.git"
+  },
+  "author": "Sunyoung Kim (sunyoungkim508@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunyoungKim508/task-rocket/issues"
+  },
+  "homepage": "https://github.com/SunyoungKim508/task-rocket#readme",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.3.2",
+    "react-css-modules": "^3.7.10",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-preset-stage-2": "^6.17.0",
+    "css-loader": "^0.25.0",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.13.0",
+    "postcss-safe-parser": "^2.0.0",
+    "precss": "^1.4.0",
+    "react-hot-loader": "^3.0.0-beta.5",
+    "style-loader": "^0.13.1",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
