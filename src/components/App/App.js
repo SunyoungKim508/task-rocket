@@ -6,7 +6,7 @@ import styles from './App.css'
 class App extends React.Component {
   render () {
     return (
-      <div styleName="wrapper">Hello</div>
+      <div styleName="wrapper">Heloladfasd</div>
     )
   }
 }
