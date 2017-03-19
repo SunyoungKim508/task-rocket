@@ -1,10 +1,10 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import configureStore from './store/configureStore';
-import Root from './containers/Root';
+import React from 'react'
+import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import configureStore from 'common/store/configureStore'
+import Root from 'common/containers/Root'
 
-const store = configureStore();
+const store = configureStore()
 
 render(
   <AppContainer>
@@ -13,11 +13,11 @@ render(
     />
   </AppContainer>,
   document.getElementById('root')
-);
+)
 
 if (module.hot) {
-  module.hot.accept('./containers/Root', () => {
-    const RootContainer = require('./containers/Root').default;
+  module.hot.accept('common/containers/Root', () => {
+    const RootContainer = require('common/containers/Root').default
     render(
       <AppContainer>
         <RootContainer
@@ -25,6 +25,6 @@ if (module.hot) {
         />
       </AppContainer>,
       document.getElementById('root')
-    );
-  });
+    )
+  })
 }

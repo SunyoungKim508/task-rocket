@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import component from './component'
-import { addTodo } from '../../actions/example'
+import { addTodo, incrementAsync, increment } from 'common/actions/example'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -12,7 +12,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     onClick: () => {
       const text = 'yoyoyo'
       dispatch(addTodo(text))
-    }
+      dispatch(addTodo('blablacbla'))
+    },
+    onIncrementAsync: () => {
+      dispatch(incrementAsync())
+    },
+    onIncrement: () => {
+      dispatch(increment())
+    },
   }
 }
 

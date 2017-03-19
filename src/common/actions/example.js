@@ -1,4 +1,4 @@
-import * as EXAMPLE_ACTIONS from '../constants/example';
+import * as EXAMPLE_ACTIONS from 'common/constants/example';
 
 /*
  * action creators
@@ -14,4 +14,12 @@ export function toggleTodo(index) {
 
 export function setVisibilityFilter(filter) {
   return { type: EXAMPLE_ACTIONS.SET_VISIBILITY_FILTER, filter }
+}
+
+export function incrementAsync() {
+  return { type: EXAMPLE_ACTIONS.INCREMENT_ASYNC }
+}
+
+export function increment() {
+  return { type: EXAMPLE_ACTIONS.INCREMENT }
 }

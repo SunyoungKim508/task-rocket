@@ -1,3 +1,5 @@
+require("babel-polyfill");
+
 var webpack = require('webpack');
 var path = require('path');
 
@@ -14,6 +16,7 @@ var SOURCE_DIR = path.join(__dirname, 'src');
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
@@ -43,6 +46,10 @@ module.exports = {
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
+    root: [
+      __dirname,
+      path.join(__dirname, 'src'),
+    ],
     extensions: ['', '.js', 'jsx']
   },
   resolveLoader: {

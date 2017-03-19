@@ -1,4 +1,4 @@
-import * as EXAMPLE_ACTIONS from '../constants/example';
+import * as EXAMPLE_ACTIONS from 'common/constants/example';
 
 export default function todos(state = [], action) {
   switch (action.type) {
@@ -9,6 +9,12 @@ export default function todos(state = [], action) {
           text: action.text,
           completed: false
         }
+      ]
+    case EXAMPLE_ACTIONS.INCREMENT:
+      const num = 'yay'
+      return [
+        ...state,
+        num,
       ]
     default:
       return state
