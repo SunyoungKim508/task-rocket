@@ -15,7 +15,9 @@
     "prebuild": "npm run clean-and-copy",
     "prebuild:prod": "npm run clean-and-copy",
     "build": "webpack && NODE_ENV=development",
-    "build:prod": "webpack && NODE_ENV=production -p"
+    "build:prod": "webpack && NODE_ENV=production -p",
+    "lint": "esw webpack.config.* src tools --color",
+    "lint:watch": "npm run lint -- --watch"
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,13 @@
     "babel-polyfill": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
     "css-loader": "^0.25.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-watch": "^3.0.1",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",
     "postcss-safe-parser": "^2.0.0",

@@ -2,11 +2,11 @@
  * action types
  */
 
-export const ADD_TODO = 'ADD_TODO'
-export const TOGGLE_TODO = 'TOGGLE_TODO'
-export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
-export const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
-export const INCREMENT = 'INCREMENT'
+export const ADD_TODO = 'ADD_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+export const INCREMENT_ASYNC = 'INCREMENT_ASYNC';
+export const INCREMENT = 'INCREMENT';
 
 /*
  * other constants
@@ -15,5 +15,5 @@ export const INCREMENT = 'INCREMENT'
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
-}
+  SHOW_ACTIVE: 'SHOW_ACTIVE',
+};

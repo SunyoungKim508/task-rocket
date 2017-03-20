@@ -1,30 +1,25 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
-import configureStore from 'common/store/configureStore'
-import Root from 'common/containers/Root'
+import React from 'react';
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import configureStore from 'common/store/configureStore';
+import RootContainer from 'common/containers/Root';
 
-const store = configureStore()
+const store = configureStore();
 
-render(
+const App = (
   <AppContainer>
-    <Root
-      store={ store }
+    <RootContainer
+      store={store}
     />
-  </AppContainer>,
-  document.getElementById('root')
-)
+  </AppContainer>
+);
+
+const rootEl = document.getElementById('root');
+
+render(App, rootEl);
 
 if (module.hot) {
   module.hot.accept('common/containers/Root', () => {
-    const RootContainer = require('common/containers/Root').default
-    render(
-      <AppContainer>
-        <RootContainer
-          store={ store }
-        />
-      </AppContainer>,
-      document.getElementById('root')
-    )
-  })
+    render(App, rootEl);
+  });
 }
