@@ -1,8 +1,5 @@
-import ProdRoot from './Root.prod';
-import DevRoot from './Root.dev';
-
 if (process.env.NODE_ENV === 'production') {
-  module.exports = ProdRoot;
+  module.exports = require('./Root.prod'); // eslint-disable-line
 } else {
-  module.exports = DevRoot;
+  module.exports = require('./Root.dev'); // eslint-disable-line
 }

@@ -1,8 +1,5 @@
-import ProdConfigureStore from './configureStore.prod';
-import DevConfigureStore from './configureStore.dev';
-
 if (process.env.NODE_ENV === 'production') {
-  module.exports = ProdConfigureStore;
+  module.exports = require('./configureStore.prod'); // eslint-disable-line
 } else {
-  module.exports = DevConfigureStore;
+  module.exports = require('./configureStore.dev'); // eslint-disable-line
 }
